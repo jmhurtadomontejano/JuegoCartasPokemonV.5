@@ -64,19 +64,19 @@ td, tr, th, btn, button {
 }
 
 .carta img {
-  height: 150px;
+  height: 200px;
   width: 100%;
   align-self: center;
   border: transparent;
 }
 
 .carta {
-  background-image: url(../imgs/anverso.jpg);
+  background-image: url(../imgs/LogoPokemonRotado.png);
   background-position: center;
   border: 2px solid white;
   opacity: 1;
-  background-size: cover;
-  height: 20%;
+  background-size: contain;
+  height: 10%;
 }
 
 .menu div {
@@ -153,9 +153,8 @@ td, tr, th, btn, button {
 }
 
 .block {
-  webkit-box-shadow: inset 0px 0px 74px 23px rgba(0,0,0,1);
-  -moz-box-shadow: inset 0px 0px 74px 23px rgba(0,0,0,1);
-  box-shadow: inset 0px 0px 74px 23px rgba(0,0,0,1);
+  webkit-box-shadow: inset 0px 0px 74px 13px black;
+  box-shadow: inset 0px 0px 74px 13px black;
 }
 
 h2 {
@@ -166,37 +165,40 @@ h2 {
   background: radial-gradient(circle, #EEEEEE 0%, #F6C90E 61%, #3A4750 100%);
 }
 
-.modal-content {
-  background-color: #3A4750;
-  color: #EEEEEE;
-  font-weight: bolder;
-  border: 5px solid #EEEEEE;
-  width: auto;
-  justify-content: space-around;
-  font-weight: 900;
+/*.modal-content btn input{
+    background-color: $colour2;
+    color: $colou1;
+    border: 5px solid $colour4;
+    width:auto;
+    justify-content: space-around;
+    font-weight: 900;
 }
 
+
+
+
+
+//INFORMATION GENERAL
 .allCards {
-  background-color: #3A4750;
-  justify-content: space-around;
+    background-color: $colour2;
+    justify-content: space-around;
+}
+.menuOptionsAndLanguages{
+    background-color: $colour1;
+    justify-content: space-around;
 }
 
-.menuOptionsAndLanguages {
-  background-color: #303841;
-  justify-content: space-around;
+.card{
+    text-align: center;
+    border: 5px solid $colour3;
+    border-radius: 1em;
+    padding: 0 0 0 0;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    background-color: $colour4;
+    transition: 3s;
 }
 
-.card {
-  text-align: center;
-  border: 5px solid #F6C90E;
-  border-radius: 1em;
-  padding: 0 0 0 0;
-  margin: 0.5em 0.5em 0.5em 0.5em;
-  background-color: #EEEEEE;
-  transition: 3s;
-}
-
-/* .card:hover{
+ /* .card:hover{
     box-shadow: -2px 2px 89px 0px $colour3 inset;
     -webkit-box-shadow: -2px 2px 89px 0px $colour3 inset;
     -moz-box-shadow: -2px 2px 89px 0px $colour3 inset;
@@ -223,7 +225,7 @@ h2 {
 .card img {
   width: -moz-available;
   width: -webkit-fill-available;
-  height: 14rem;
+  height: 20rem;
 }
 
 .card-name {
@@ -273,6 +275,7 @@ h2 {
 
   h5 {
     font-size: 1.4rem;
+    font-weight: 900;
   }
 
   p, tr, td, th, btn, button {
@@ -323,21 +326,14 @@ h2 {
     font-size: 1.2em;
     padding: 0em 0em 1em 0;
   }
-
-  .carta img {
-    height: 100px;
-    width: 100%;
-    align-self: center;
-    border: transparent;
-  }
 }
 @media (max-width: 480px) {
   h5 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   p, td, tr, th but, button {
-    font-size: 0.8rem !important;
+    font-size: 0.6rem !important;
   }
 
   .menu {
@@ -390,12 +386,5 @@ h2 {
   .information {
     font-size: 1em;
     padding: 0em 0em 1em 0;
-  }
-
-  .carta img {
-    height: 90px;
-    width: 100%;
-    align-self: center;
-    border: transparent;
   }
 }/*# sourceMappingURL=styleCardGame.css.map */

@@ -61,7 +61,6 @@ const musicPikachu = new Audio('../audio/pikachu.mp3');
 const musicSquirtle = new Audio('../audio/squirtle.mp3');
 const musicCharmander = new Audio('../audio/charmander.mp3');
 const musicJigglypuff = new Audio('../audio/jigglypuff.mp3');
-const musicJigglypuffShort = new Audio('../audio/jigglypuffShort.mp3');
 const musicBulbasur = new Audio('../audio/bulbasur.mp3');
 const musicMismagius = new Audio('../audio/mismagius.mp3');
 const musicGroudon = new Audio('../audio/groudon.mp3');
@@ -131,8 +130,8 @@ function play() {
     }
 
     /* GO WEB TO THE BOARD TO CAN SHOW CARD VERY WELL */
-    href = ".board";
-    href = "#board";
+    href=".board";
+    href="#board";
 
     if (levelUser == "facil") {
         // reset(true);
@@ -190,9 +189,9 @@ function showCards() {
 
 function showBomb(tiempo) {
     tiempo = tiempo * 1000;
-    flag = false;
+    flag=false;
     /*SHOW THE BOARD TO CAN SEE THE BOMB */
-
+    
     for (var i = 0; i < positions.length; i++) {
         if ($("#" + positions[i]).data("src") == "./imgs/bomba.png") {
             //SOUND AT TURN CARD
@@ -207,8 +206,8 @@ function showBomb(tiempo) {
             setTimeout(() => {
                 cardSelected.removeAttribute("src");
                 cardSelected = null;
-                flag = true;
-
+                flag=true;
+                
             }, tiempo);
         }
     }
@@ -231,7 +230,7 @@ function chekCard(e) {
 
         //Comprobacion de la carta bomba
         if (esBomba == "./imgs/bomba.png") {
-            failsCounter = failsCounter + 1;
+            failsCounter = failsCounter+1;
             changeInformationTitleFailPoint();
             bombcard(e.target.id);
         } else {
@@ -263,9 +262,8 @@ function chekCard(e) {
                             $(".progress-bar").html(progressBarValue + "%");
                             $(".progress-bar").css("width", progressBarValue + "%");
                             //sonido ganador
-                            //const musicPikachu = new Audio('/audio/pikachu.mp3');
-                            // musicPikachu.play();
-                            reproduceCardSound(card1SRC);
+                            const musicPikachu = new Audio('/audio/pikachu.mp3');
+                            musicPikachu.play();
                             {
                                 cartasDescubiertas += new Array(card1ID);
                                 cartasDescubiertas += new Array(card2ID);
@@ -284,7 +282,7 @@ function chekCard(e) {
                                 localStorage.setItem('userStore', JSON.stringify(userStore))
                                 paintToPlayer()
                                 //sonido ganador
-                                const music = new Audio('/audio/pokemon.mp3');
+                                const music = new Audio('/audio/victory.mp3');
                                 music.play();
                                 if (language == "ES") {
                                     informationTitle.textContent = "Excelente " + currentUser + ", has ganado los 7 puntos. El juego ha terminado";
@@ -325,7 +323,6 @@ function paintToPlayer() {
 }
 
 function bombcard(e) {
-    flag = false;
     musicKoffing.play();
     $(".alert-success").removeClass("alert-primary alert-success").addClass("alert dark");
     $(".alert-danger").removeClass("alert-primary alert-danger").addClass("alert dark");
@@ -339,7 +336,6 @@ function bombcard(e) {
         setTimeout(() => {
             cardSelected = $("#" + e)[0];
             cardSelected.removeAttribute("src");
-            flag = true;
         }, 1000);
 
     } else {
@@ -348,26 +344,23 @@ function bombcard(e) {
             card1ID = null;
             cardSelected = null;
             card1SRC = null;
-            flag = true;
-        }, 1000);
+        },1000);
     }
     if (card2ID == null) {
         setTimeout(() => {
             cardSelected = $("#" + e)[0];
             cardSelected.removeAttribute("src");
-            flag = true;
         }, 1000);
 
     } else {
         setTimeout(() => {
-            card2SRC = null;
-            card2ID = null;
-            cardSelected2 = null;
-            cardSelected2.removeAttribute("src");
-            flag = true;
-        }, 1000);
+        card2SRC = null;
+        card2ID = null;
+        cardSelected2 = null;
+        cardSelected2.removeAttribute("src");
+        },1000);
     }
-
+        //ErrorCounterAndClean();
     return;
 }
 
@@ -416,36 +409,6 @@ function showCard(idCarta) {
 
 function cargaProducto() {
     $('#myModal').modal('show');
-}
-
-function reproduceCardSound(pokemonRecived) {
-    console.log(pokemonRecived);
-    switch (pokemonRecived){
-        case "./imgs/Pikachu.png":
-            musicPikachu.play();
-        break;
-        case "./imgs/Squirtle.png":
-            musicSquirtle.play();
-        break;
-        case "./imgs/Charmander.png":
-            musicCharmander.play();
-        break;
-        case "./imgs/Bulbasur.png":
-            musicBulbasur.play();
-        break;
-        case "./imgs/Mismagius.png":
-            musicMismagius.play();
-        break;
-        case "./imgs/Jigglypuff.png":
-            musicJigglypuffShort.play();
-        break;
-        case "./imgs/groudon.png":
-            musicGroudon.play();
-        break;
-        case "./imgs/Bulbasur.png":
-            musicBulbasur.play();
-        break;
-    }
 }
 
 
