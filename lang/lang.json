@@ -1,0 +1,41 @@
+{
+    "lang":{
+        "ES":{
+            "MainTitle": "JUEGO DE CARTAS POKEMON",
+            "Options":"OPCIONES",
+            "Game":"JUEGO",   
+            "Information":"INFORMACIÓN",
+            "Language": "IDIOMA",       
+            "Spanish":"ESPAÑOL", 
+            "English":"INGLÉS",
+            "Play": "JUGAR",
+            "informationAlert":"INFORMACION",
+            "informationTitleFAIL": "LHas fallado, los fallos acumulados son: ",
+            "informationTitleWIN": "LHas ganado un punto, ahora tienes: ",
+            "Score": "PUNTOS",
+            "Errors": "ERRORES",
+            "TopPlayer": "MEJOR JUGADORA",
+            "Fails": "FALLOS"
+        },
+        "EN":{
+            "MainTitle": "POKEMON CARDS GAME",
+            "Options":"OPTIONS",
+            "Game":"GAME",
+            "Information":"INFORMATION",
+            "Language": "LANGUAGE",
+            "Spanish":"SPANISH", 
+            "English":"ENGLISH",
+            "Play": "PLAY",
+            "Score": "POINTS",
+            "Errors": "ERRORS",
+            "TopPlayer": "TOP PLAYER",
+            "Fails": "FAILS",
+            
+    
+            "informationAlert":"INFORMATION",
+            "informationTitleFAIL": "LYou fail, your acummulated fails are: ",
+            "informationTitleWIN": "LYou Win 1 Point, now you have: "
+        }
+
+    }
+}
